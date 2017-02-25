@@ -1,0 +1,161 @@
+ /* create by rain 2017.2.25 */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #000;
+}
+
+.wrap {
+	width: 800px;
+	height: 500px;
+	margin: 100px auto 0;
+	background: #fff;
+}
+
+.loading {
+	width: inherit;
+	height: inherit;
+	position: relative;
+}
+
+/*外圆*/
+.circle-outer {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	top: 150px;
+	left: 300px;
+}
+
+.left {
+	left: 0;
+}
+
+.right {
+	right: 0;
+}
+
+.circle {
+	width: 180px;
+	height: 180px;
+	border: 10px solid transparent;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+}
+
+.right-outer {
+	border-top:10px solid #ff298b;
+    border-right:10px solid #ff298b;
+    right:0;
+    animation: outer 1.5s linear infinite;
+    transform: rotate(180deg);
+}
+
+.left-outer {
+	border-top:10px solid #ff298b;
+    border-left:10px solid #ff298b;
+    left:0;
+    animation: outer 1.5s linear infinite;
+	transform: rotate(180deg);
+}
+
+@keyframes outer {
+	50% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(540deg);
+	}
+}
+
+/*内圆*/
+.circle-inner {
+	width: 120px;
+	height: 120px;
+	position: relative;
+	left: 340px;
+	top: -10px;
+	background: #fbbbbc;
+	border-radius: 50%;
+}
+
+.inner-wrap {
+	width: 60px;
+	height: 120px;
+	position: absolute;
+	overflow: hidden;
+}
+
+.round-left {
+	left: 0;
+}
+
+.round-right {
+	right: 0;
+}
+
+.round {
+	width: 100%;
+	height: 100%;
+	background: none repeat scroll 0 0 #FF298B;
+	border-radius: 999px;
+	position: absolute;
+}
+
+.right-inner {
+	right: 0;
+	border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    transform-origin: 0% 50% 0;
+    animation: roundRight 3s linear infinite;
+}
+
+.left-inner {
+	left: 0;
+	border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    animation: roundLeft 3s linear infinite;
+    transform-origin: 100% 50% 0;
+}
+
+@keyframes roundLeft {
+	0% {
+    transform: rotate(0deg);
+	}
+	25% {
+	    transform: rotate(0deg);
+	}
+	50% {
+	    transform: rotate(180deg);
+	}
+	75% {
+	    transform: rotate(180deg);
+	}
+	100% {
+	    transform: rotate(360deg);
+	}
+}
+
+@keyframes roundRight {
+	0% {
+	    transform: rotate(0deg);
+	}
+	
+	25% {
+	    transform: rotate(180deg);
+	}
+	50% {
+	    transform: rotate(180deg);
+	}
+	75% {
+	    transform: rotate(360deg);
+	}
+	100% {
+	    transform: rotate(360deg);
+	}
+}
